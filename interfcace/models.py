@@ -30,6 +30,6 @@ class LecturaTempHume(models.Model):
     modulo = models.CharField(max_length=8)
 
 class ModuloUbicacion(models.Model):
-    modulo          = models.ForeignKey(Module, db_column='modulo', on_delete='cascade')
+    modulo          = models.ForeignKey(Module, db_column='modulo', on_delete=models.CASCADE)
     last_latitud    = models.FloatField(blank=True, null=True)
     last_longitud   = models.FloatField(blank=True, null=True)
